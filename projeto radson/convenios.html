@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Convênios atendidos pela RADSON - Medicina Diagnóstica">
+<title>Convênios - RADSON</title>
+<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ==========================
+   Reset & Base
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F9FAFB;
+    color: #1F2937;
+    line-height: 1.6;
+}
+
+/* ==========================
+   Navbar
+========================== */
+.navbar {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.navbar .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #DC2626;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.navbar .menu a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #1F2937;
+    transition: color 0.3s;
+}
+
+.navbar .menu a:hover,
+.navbar .menu a.active {
+    color: #DC2626;
+}
+
+/* ==========================
+   Hero Section
+========================== */
+.hero {
+    background: linear-gradient(180deg, #DC2626 0%, #B91C1C 100%);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    color: #FEE2E2;
+}
+
+/* ==========================
+   Main Container
+========================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ==========================
+   Search Box
+========================== */
+.search-box {
+    max-width: 400px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #DC2626;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+/* ==========================
+   Convênios Grid
+========================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.convenio-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 20px;
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid #E5E7EB;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    cursor: default;
+}
+
+.convenio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: #DC2626;
+    background-color: #FEE2E2;
+}
+
+/* ==========================
+   Footer
+========================== */
+footer {
+    background-color: #DC2626;
+    color: #FFF;
+    padding: 60px 20px 20px;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+footer .btn {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #DC2626;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer .btn:hover {
+    background-color: #FEE2E2;
+}
+
+.footer-bottom {
+    border-top: 1px solid #B91C1C;
+    padding-top: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-bottom .links a {
+    color: #FFF;
+    margin: 0 10px;
+    text-decoration: underline;
+}
+
+.footer-bottom .links a:hover {
+    color: #FFE5E5;
+}
+
+/* ==========================
+   Responsividade
+========================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .navbar .menu a {
+        margin-left: 12px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+</style> 
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRxJu7Z5AzNRcUD3aTLt5fk1zhzRCzncRv9w&s" alt="RADSON Logo">
+            
+        </a>
+        <div class="menu">
+            <a href="index.html">Início</a>
+            <a href="exames.html">Exames</a>
+            <a href="convenios.html" class="active">Convênios</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+    <div class="container text-center">
+        <h1>Convênios</h1>
+        <p>Atendemos os principais planos de saúde, garantindo praticidade e confiança em seu atendimento.</p>
+    </div>
+</header>
+
+<!-- Lista de Convênios -->
+<main class="container">
+    <h2>Planos Atendidos</h2>
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Pesquisar convênio...">
+    </div>
+    <div id="conveniosGrid" class="grid">
+        <!-- TODOS os convênios em ordem alfabética -->
+        <div class="convenio-card">ADVOGADOS RECH E OLIVEIRA</div>
+        <div class="convenio-card">APOPESC</div>
+        <div class="convenio-card">ASFAP</div>
+        <div class="convenio-card">ASSAF</div>
+        <div class="convenio-card">ASSEFAZ</div>
+        <div class="convenio-card">ATENDBEM</div>
+        <div class="convenio-card">ATENDCARD</div>
+        <div class="convenio-card">BELAPAN</div>
+        <div class="convenio-card">CABERGS</div>
+        <div class="convenio-card">CAIXA DE ASSISTÊNCIA DOS ADVOGADOS RS</div>
+        <div class="convenio-card">CASSI</div>
+        <div class="convenio-card">CAUSO</div>
+        <div class="convenio-card">CENTRO CLINICO GAUCHO - CCG</div>
+        <div class="convenio-card">CENTRO DE REABILITAÇÃO ESPORTIVA LTDA</div>
+        <div class="convenio-card">CHIMAMED</div>
+        <div class="convenio-card">CIJACUI</div>
+        <div class="convenio-card">CISVALE</div>
+        <div class="convenio-card">CLINICA AMOR SAUDE</div>
+        <div class="convenio-card">CLINICA PREVINI</div>
+        <div class="convenio-card">DIERSMANN ASSISTÊNCIA FAMILIAR</div>
+        <div class="convenio-card">DS ENGENHARIA</div>
+        <div class="convenio-card">E. KOPP</div>
+        <div class="convenio-card">ELISEU KOPP</div>
+        <div class="convenio-card">ERGOSS</div>
+        <div class="convenio-card">ESPORTE CLUBE GUARANI</div>
+        <div class="convenio-card">ESPORTE CLUBE UNIÃO CORINTHIANS</div>
+        <div class="convenio-card">FAMILIA ANA NERY</div>
+        <div class="convenio-card">FUNERÁRIA GASS</div>
+        <div class="convenio-card">FUNERÁRIA HALMENSCHLAGER</div>
+        <div class="convenio-card">FUSEX</div>
+        <div class="convenio-card">GEAP</div>
+        <div class="convenio-card">GERMANI ALIMENTOS</div>
+        <div class="convenio-card">HOSPITAL ANA NERY</div>
+        <div class="convenio-card">HOSPITAL CANDELARIA</div>
+        <div class="convenio-card">HOSPITAL SANTA CRUZ</div>
+        <div class="convenio-card">HOSPITAL VERA CRUZ</div>
+        <div class="convenio-card">IBCM</div>
+        <div class="convenio-card">INDUCAL</div>
+        <div class="convenio-card">IPE</div>
+        <div class="convenio-card">JTI PROCESSADORA</div>
+        <div class="convenio-card">LIGA FEM. BOQ. LEAO</div>
+        <div class="convenio-card">MEDFACIL - LAJEADO</div>
+        <div class="convenio-card">METALURGICA MOR</div>
+        <div class="convenio-card">PHILIP MORRIS</div>
+        <div class="convenio-card">PLAMART</div>
+        <div class="convenio-card">PLANO DE ASSISTÊNCIA FAMILIAR</div>
+        <div class="convenio-card">PLANO FREITAS</div>
+        <div class="convenio-card">PREMIUM TABACOS</div>
+        <div class="convenio-card">PREVINA</div>
+        <div class="convenio-card">PREVISUL</div>
+        <div class="convenio-card">PRODENT</div>
+        <div class="convenio-card">PROTEGE</div>
+        <div class="convenio-card">PROVIDA</div>
+        <div class="convenio-card">PRO VIDA SAUDE OCUP.</div>
+        <div class="convenio-card">PRONTY ASSESSORIA ORGANIZACIONAL</div>
+        <div class="convenio-card">SAUDE CAIXA</div>
+        <div class="convenio-card">SAUDE PAZ</div>
+        <div class="convenio-card">SC AVENIDA</div>
+        <div class="convenio-card">SC SANTA CRUZ</div>
+        <div class="convenio-card">SC SANTA CRUZ - LOCAÇÃO</div>
+        <div class="convenio-card">SEGURA MED</div>
+        <div class="convenio-card">SESC</div>
+        <div class="convenio-card">SESI VITA</div>
+        <div class="convenio-card">SIND. COMÉRCIO EMPREGADOS SCS E REGIÃO</div>
+        <div class="convenio-card">SIND. EMP. COM. P.GRANDE, P. SOBRADO E RP</div>
+        <div class="convenio-card">SIND. IND. ALIMENTAÇÃO SCS</div>
+        <div class="convenio-card">SIND. METALÚRGICOS SCS</div>
+        <div class="convenio-card">SIND. RURAL CANDELARIA</div>
+        <div class="convenio-card">SIND. RURAL SCS</div>
+        <div class="convenio-card">SIND. TRAB. IND. FUMO E ALIM. SCS E REGIÃO</div>
+        <div class="convenio-card">SIND. TRAB. NAS IND. ALIMENTAÇÃO DE RP</div>
+        <div class="convenio-card">SIND. TRAB. AGRICULTORES FAM. GRAMADO X.</div>
+        <div class="convenio-card">SIND. TRAB. IND. METALMEC MAT.ELETRICO SCS</div>
+        <div class="convenio-card">SIND. TRAB. IND. CONSTRUÇÃO E MOB. RP</div>
+        <div class="convenio-card">SIND. TRAB. RURAIS DE PANTANO GRANDE</div>
+        <div class="convenio-card">SIND. TRAB. RURAIS DE PASSO SOBRADO</div>
+        <div class="convenio-card">SIND. TRAB. RURAIS DE RIO PARDO</div>
+        <div class="convenio-card">SIND. TRAB. RURAIS DE VENANCIO AIRES</div>
+        <div class="convenio-card">SIND. TRAB. RURAIS AGRIC. FAMILIAR VERA C.</div>
+        <div class="convenio-card">SIND. VIGILANTES SCS E REGIÃO</div>
+        <div class="convenio-card">SINDIASSEIO</div>
+        <div class="convenio-card">SINDIPOSTOS</div>
+        <div class="convenio-card">SINDIRODOVIARIOS</div>
+        <div class="convenio-card">SÓCIOS HOSP. ANA NERY</div>
+        <div class="convenio-card">STR SANTA CRUZ</div>
+        <div class="convenio-card">SUS BPA</div>
+        <div class="convenio-card">SUS INTERNO</div>
+        <div class="convenio-card">SUS PMAH</div>
+        <div class="convenio-card">SUS UPA</div>
+        <div class="convenio-card">UNIFACIL</div>
+        <div class="convenio-card">UNIMED</div>
+        <div class="convenio-card">UNIVERSALMED</div>
+        <div class="convenio-card">VALE SAUDE</div>
+        <div class="convenio-card">WOLKMER E CIA LTDA</div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <h2>Não encontrou seu convênio?</h2>
+        <p>Entre em contato e verificaremos outras opções de atendimento.</p>
+        <a href="contato.html" class="btn">Fale Conosco</a>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 RADSON. Todos os direitos reservados.</p>
+        <div class="links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const conveniosGrid = document.getElementById('conveniosGrid');
+    const cards = conveniosGrid.querySelectorAll('.convenio-card');
+
+    searchInput.addEventListener('input', function() {
+        const filter = searchInput.value.toLowerCase();
+        cards.forEach(card => {
+            const text = card.textContent.toLowerCase();
+            card.style.display = text.includes(filter) ? 'block' : 'none';
+        });
+    });
+</script>
+
+</body>
+</html>

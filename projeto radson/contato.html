@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contato & Trabalhe Conosco - RADSON</title>
+    <meta name="description" content="Entre em contato com a RADSON ou envie seu currículo.">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://www.radson.com.br/assets/static/favicons/favicon-16x16.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: white;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #dc2626;
+            /* red-600 */
+        }
+
+        .nav-links .active {
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        /* Hero */
+        .hero {
+            background-color: #dc2626;
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .sections-container {
+            padding: 0px 80px;
+        }
+
+        .hero p {
+            margin-top: 1rem;
+            font-size: 1.125rem;
+        }
+
+        /* Botões de troca */
+        .btn-toggle-container {
+            max-width: 768px;
+            margin: 2rem auto;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0 1.5rem;
+        }
+
+        .btn-contato,
+        .btn-trabalhe {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+        }
+
+        .btn-contato {
+            background-color: #dc2626;
+            color: white;
+        }
+
+        .btn-contato:hover {
+            background-color: #b91c1c;
+        }
+
+        .btn-trabalhe {
+            background-color: #dc2626;
+            color: white;
+        }
+
+        .btn-trabalhe:hover {
+            background-color: #b91c1c;
+        }
+
+        /* Forms */
+        .form-section,
+        .form-container {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section input,
+        .form-section textarea,
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            border: 1px solid #d1d5db;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-section button,
+        .form-container button {
+            background-color: #dc2626;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+        }
+
+        .form-section button:hover,
+        .form-container button:hover {
+            background-color: #b91c1c;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1f2937;
+            color: #9ca3af;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img width="150"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRxJu7Z5AzNRcUD3aTLt5fk1zhzRCzncRv9w&s"
+                        alt="Logo RADSON">
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Início</a>
+                    <a href="exames.html">Exames</a>
+                    <a href="convenios.html">Convênios</a>
+                    <a href="contato.html" class="active">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Fale Conosco ou Trabalhe Conosco</h1>
+            <p>Escolha a opção abaixo e preencha o formulário correspondente.</p>
+        </div>
+    </section>
+
+    <!-- BOTÕES DE TROCA -->
+    <div class="btn-toggle-container">
+        <button id="btn-contato" class="btn-contato">Contato</button>
+        <button id="btn-trabalhe" class="btn-trabalhe">Trabalhe Conosco</button>
+    </div>
+
+    <!-- SEÇÕES -->
+    <section class="sections">
+        <div class="sections-container">
+
+            <!-- CONTATO -->
+            <div id="contato-section">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h2>Informações de Contato</h2>
+                        <p>Av. Principal, 1234 - Centro<br>Cidade - Estado</p>
+                        <p><i data-feather="phone"></i>(XX) XXXX-XXXX</p>
+                        <p><i data-feather="mail"></i>contato@radson.com.br</p>
+                    </div>
+                    <form class="form-section">
+                        <h2>Envie sua mensagem</h2>
+                        <input type="text" placeholder="Seu Nome">
+                        <input type="email" placeholder="Seu Email">
+                        <textarea rows="5" placeholder="Mensagem (opicional)"></textarea>
+                        <button>Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- TRABALHE CONOSCO -->
+            <div id="trabalhe-section" class="hidden">
+                <div class="form-container">
+                    <h2>Envie seu Currículo</h2>
+                    <form>
+                        <input type="text" placeholder="Nome Completo">
+                        <input type="email" placeholder="E-mail">
+                        <input type="tel" placeholder="Telefone">
+                        <textarea rows="4" placeholder="Mensagem (opicional)"></textarea>
+                        <input type="file">
+                        <button>Enviar Currículo</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 RADSON - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        feather.replace();
+
+        const btnContato = document.getElementById('btn-contato');
+        const btnTrabalhe = document.getElementById('btn-trabalhe');
+        const contatoSection = document.getElementById('contato-section');
+        const trabalheSection = document.getElementById('trabalhe-section');
+
+        function ativarBotao(selecionado, outro) {
+            // Botão selecionado vermelho
+            selecionado.classList.add('bg-red-600', 'text-white');
+            selecionado.classList.remove('bg-red-300', 'text-gray-800');
+
+            // Botão não selecionado cinza
+            outro.classList.add('bg-gray-300', 'text-gray-800');
+            outro.classList.remove('bg-red-600', 'text-white');
+        }
+
+        btnContato.addEventListener('click', () => {
+            contatoSection.classList.remove('hidden');
+            trabalheSection.classList.add('hidden');
+            ativarBotao(btnContato, btnTrabalhe);
+        });
+
+        btnTrabalhe.addEventListener('click', () => {
+            trabalheSection.classList.remove('hidden');
+            contatoSection.classList.add('hidden');
+            ativarBotao(btnTrabalhe, btnContato);
+        });
+
+    </script>
+</body>
+
+</html>
