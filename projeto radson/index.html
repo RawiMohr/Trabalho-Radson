@@ -1,75 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="RADSON - Excelência em medicina diagnóstica. Exames de imagem e consultas.">
 
     <title>RADSON - Medicina Diagnóstica</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="https://www.radson.com.br/assets/static/favicons/favicon-16x16.png">
-    
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://www.radson.com.br/assets/static/favicons/favicon-16x16.png">
+
     <link rel="stylesheet" href="style.css">
-    
-    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/home.css">
+
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="Montserrat">
-    <nav class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <a href="index.html">
-                           <img width="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRxJu7Z5AzNRcUD3aTLt5fk1zhzRCzncRv9w&s" alt="Logotipo da RADSON Medicina Diagnóstica">
-                        </a>      
-                    </div>
-                </div>
-                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
-                    <a href="https://rds.otimusclinic.com/radson/servlet/app.entrar" target="_blank" class="text-gray-900 hover:text-primary px-3 py-2 font-medium">Acesso médico</a>
-                    <a href="https://rds.otimusclinic.com/radson/servlet/app.resultadodeexame?sdTjZIxAkYVpFL5AwTTQ8aUtVYs+hKhFyP16JMhyWus=" target="_blank" class="text-gray-900 hover:text-primary px-3 py-2 font-medium">Resultados exames</a>
-                    <a href="exames.html" class="text-gray-900 hover:text-primary px-3 py-2 font-medium">Exames</a>
-                    <a href="convenios.html" class="text-gray-900 hover:text-primary px-3 py-2 font-medium">Convênios</a>
-                    <a href="contato.html" class="text-gray-900 hover:text-primary px-3 py-2 font-medium">Contato</a>
-                </div>
-                <div class="-mr-2 flex items-center md:hidden">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                        <i data-feather="menu"></i>
-                    </button>
+
+<body>
+    <nav class="main-header-nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo-area">
+                    <a href="index.html">
+                        <img width="200"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRxJu7Z5AzNRcUD3aTLt5fk1zhzRCzncRv9w&s"
+                            alt="Logotipo da RADSON Medicina Diagnóstica">
+                    </a>
                 </div>
             </div>
+
+            <div class="nav-toggle-mobile">
+                <button type="button" class="menu-button" aria-controls="mobile-menu" aria-expanded="false"
+                    id="mobile-menu-button">
+                    <svg class="h-6 w-6 menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="h-6 w-6 hidden menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="nav-menu-desktop">
+                <a href="https://rds.otimusclinic.com/radson/servlet/app.entrar" target="_blank"
+                    class="menu-link">Acesso médico</a>
+                <a href="https://rds.otimusclinic.com/radson/servlet/app.resultadodeexame?sdTjZIxAkYVpFL5AwTTQ8aUtVYs+hKhFyP16JMhyWus="
+                    target="_blank" class="menu-link">Resultados exames</a>
+                <a href="exames.html" class="menu-link">Exames</a>
+                <a href="convenios.html" class="menu-link">Convênios</a>
+                <a href="contato.html" class="menu-link">Contato</a>
+            </div>
+
         </div>
 
-        <div class="md:hidden hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="https://rds.otimusclinic.com/radson/servlet/app.entrar" class="text-gray-900 hover:text-primary block px-3 py-2 font-medium">Acesso médico </a>
-                <a href="https://rds.otimusclinic.com/radson/servlet/app.resultadodeexame?sdTjZIxAkYVpFL5AwTTQ8aUtVYs+hKhFyP16JMhyWus=" class="text-gray-900 hover:text-primary block px-3 py-2 font-medium">Resultado exames</a>
-                <a href="exames.html" class="text-gray-900 hover:text-primary block px-3 py-2 font-medium">Exames</a>
-                <a href="convenios.html" class="text-gray-900 hover:text-primary block px-3 py-2 font-medium">Convênios</a>
-                <a href="contato.html" class="text-gray-900 hover:text-primary block px-3 py-2 font-medium">Contato</a>
+        <div class="nav-menu-mobile hidden" id="mobile-menu">
+            <div class="mobile-links-wrapper">
+                <a href="https://rds.otimusclinic.com/radson/servlet/app.entrar" class="mobile-menu-link">Acesso médico
+                </a>
+                <a href="https://rds.otimusclinic.com/radson/servlet/app.resultadodeexame?sdTjZIxAkYVpFL5AwTTQ8aUtVYs+hKhFyP16JMhyWus="
+                    class="mobile-menu-link">Resultado exames</a>
+                <a href="exames.html" class="mobile-menu-link">Exames</a>
+                <a href="convenios.html" class="mobile-menu-link">Convênios</a>
+                <a href="contato.html" class="mobile-menu-link">Contato</a>
             </div>
         </div>
     </nav>
 
-    <div class="hero-bg text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="md:text-center">
-                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-                    <span class="block">SAÚDE E BEM-ESTAR</span>
-                    <span class="block text-primary-200">COM EXCELÊNCIA</span>
+
+    <div class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">SAÚDE E BEM-ESTAR</span>
+                    <span class="hero-title-line primary-color">COM EXCELÊNCIA</span>
                 </h1>
-                <p class="mt-3 max-w-md mx-auto text-base sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                <p class="hero-subtitle">
                     A RADSON oferece diagnósticos precisos com tecnologia de ponta e atendimento humanizado.
                 </p>
-                <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-                    <div class="rounded-md shadow">
-                        <a href="contato.html" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
-                            Agendar Consulta
+                <div class="hero-buttons-wrapper">
+                    <div class="hero-button-item">
+                        <a href="https://agenda.otimusclinic.com/rds" target="_blank" class="hero-button primary-btn">
+                            Agendamento Online
                         </a>
                     </div>
-                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                        <a href="exames.html" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-700 md:py-4 md:text-lg md:px-10">
-                            Nossos Exames
+                    <div class="hero-button-item secondary-margin">
+                        <a href="https://api.whatsapp.com/send/?phone=5551996492360&text&type=phone_number&app_absent=0 "
+                            target="_blank" class="hero-button primary-btn">
+                            Agendamento via Whatsapp
                         </a>
                     </div>
                 </div>
@@ -77,90 +100,90 @@
         </div>
     </div>
 
-    <div class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-primary font-semibold tracking-wide uppercase">Serviços</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+    <div class="services-section">
+        <div class="services-container">
+            <div class="section-header">
+                <h2 class="section-tag">Serviços</h2>
+                <p class="section-title">
                     Nossas Especialidades
                 </p>
             </div>
-            <div class="mt-10">
-                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
-                    <div class="feature-card transition duration-500 ease-in-out relative bg-white p-6 rounded-lg shadow-md">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-                            <i class="fas fa-x-ray"></i>
-                        </div>
-                        <div class="mt-5">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">Radiologia Digital</h3>
-                            <p class="mt-2 text-base text-gray-500">
-                                Exame de imagem que utiliza raios X com alta definição e menor dose de radiação.
-                            </p>
-                        </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-x-ray"></i>
                     </div>
-                    <div class="feature-card transition duration-500 ease-in-out relative bg-white p-6 rounded-lg shadow-md">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-                           <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="mt-5">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">Mamografia Digital</h3>
-                            <p class="mt-2 text-base text-gray-500">
-                                Exame radiológico que detecta alterações e nódulos nas mamas.
-                            </p>
-                        </div>
+                    <div class="service-text-content">
+                        <h3 class="service-title-card">Radiologia Digital</h3>
+                        <p class="service-description">
+                            Exame de imagem que utiliza raios X com alta definição e menor dose de radiação.
+                        </p>
                     </div>
-                    <div class="feature-card transition duration-500 ease-in-out relative bg-white p-6 rounded-lg shadow-md">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-                          <i class="fas fa-bone"></i>
-                        </div>
-                        <div class="mt-5">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">Densitometria Óssea</h3>
-                            <p class="mt-2 text-base text-gray-500">
-                                Avalia a densidade mineral dos ossos para diagnosticar osteoporose e fraturas.
-                            </p>
-                        </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="service-text-content">
+                        <h3 class="service-title-card">Mamografia Digital</h3>
+                        <p class="service-description">
+                            Exame radiológico que detecta alterações e nódulos nas mamas.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <div class="service-text-content">
+                        <h3 class="service-title-card">Densitometria Óssea</h3>
+                        <p class="service-description">
+                            Avalia a densidade mineral dos ossos para diagnosticar osteoporose e fraturas.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="bg-gray-50 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-primary font-semibold tracking-wide uppercase">Notícias</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+    <div class="news-section">
+        <div class="news-container">
+            <div class="section-header">
+                <h2 class="section-tag">Notícias</h2>
+                <p class="section-title">
                     Novidades RADSON
                 </p>
             </div>
-            <div class="mt-10 grid gap-8 lg:grid-cols-3">
-                <div class="bg-white overflow-hidden shadow rounded-lg">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('http://static.photos/medical/640x360/1')"></div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900">Novo Equipamento de Ressonância</h3>
-                        <p class="mt-2 text-gray-600">A RADSON acaba de adquirir um moderno aparelho de ressonância magnética 3 Tesla.</p>
-                        <div class="mt-4">
-                            <a href="#" class="text-primary font-medium">Ler mais</a>
+            <div class="news-grid">
+                <div class="news-post">
+                    <div class="news-image-1"></div>
+                    <div class="news-content">
+                        <h3 class="news-title">Novo Equipamento de Ressonância</h3>
+                        <p class="news-excerpt">A RADSON acaba de adquirir um moderno aparelho de ressonância magnética
+                            3 Tesla.</p>
+                        <div class="news-link-wrapper">
+                            <a href="#" class="news-link">Ler mais</a>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white overflow-hidden shadow rounded-lg">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('http://static.photos/medical/640x360/2')"></div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900">Protocolos de Segurança</h3>
-                        <p class="mt-2 text-gray-600">Conheça nossas novas medidas de segurança contra a COVID-19.</p>
-                        <div class="mt-4">
-                            <a href="#" class="text-primary font-medium">Ler mais</a>
+                <div class="news-post">
+                    <div class="news-image-2"></div>
+                    <div class="news-content">
+                        <h3 class="news-title">Protocolos de Segurança</h3>
+                        <p class="news-excerpt">Conheça nossas novas medidas de segurança contra a COVID-19.</p>
+                        <div class="news-link-wrapper">
+                            <a href="#" class="news-link">Ler mais</a>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white overflow-hidden shadow rounded-lg">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('http://static.photos/medical/640x360/3')"></div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900">Parceria com Hospital X</h3>
-                        <p class="mt-2 text-gray-600">Fechamos uma importante parceria com o Hospital X para melhor atender nossos pacientes.</p>
-                        <div class="mt-4">
-                            <a href="#" class="text-primary font-medium">Ler mais</a>
+                <div class="news-post">
+                    <div class="news-image-3"></div>
+                    <div class="news-content">
+                        <h3 class="news-title">Parceria com Hospital X</h3>
+                        <p class="news-excerpt">Fechamos uma importante parceria com o Hospital X para melhor atender
+                            nossos pacientes.</p>
+                        <div class="news-link-wrapper">
+                            <a href="#" class="news-link">Ler mais</a>
                         </div>
                     </div>
                 </div>
@@ -168,111 +191,98 @@
         </div>
     </div>
 
-    <div class="bg-primary">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-            <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                <span class="block">Pronto para agendar seu exame?</span>
-                <span class="block text-primary-200">Entre em contato conosco.</span>
-            </h2>
-            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-                <div class="inline-flex rounded-md shadow">
-                    <a href="contato.html" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50">
-                        Agendar Agora
-                    </a>
-                </div>
-                <div class="ml-3 inline-flex rounded-md shadow">
-                    <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700">
-                        <i data-feather="phone" class="mr-2"></i> 51 21095151
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="bg-gray-800">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-white text-sm font-semibold tracking-wider uppercase">RADSON</h3>
-                    <p class="mt-4 text-gray-400 text-sm">
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">RADSON</h3>
+                    <p class="footer-text">
                         Excelência em medicina diagnóstica há 39 anos.
                     </p>
-                    <h4 class="text-white text-xs font-semibold tracking-wider uppercase mt-6">Siga-nos</h4>
-                    <div class="mt-2 flex space-x-6">
-                        <a href="https://www.instagram.com/radson.radiologico/" target="_blank" class="text-gray-400 hover:text-white" title="Instagram">
-                            <i data-feather="instagram" class="w-6 h-6"></i>
+                    <h4 class="footer-subtitle">Siga-nos</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/radson.radiologico/" target="_blank" class="social-link"
+                            title="Instagram">
+                            <i data-feather="instagram" class="social-icon"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white" title="Facebook">
-                            <i data-feather="facebook" class="w-6 h-6"></i>
+                        <a href="https://www.facebook.com/radson.radiologico/" target="_blank" class="social-link"
+                            title="Facebook">
+                            <i data-feather="facebook" class="social-icon"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white" title="Twitter">
-                            <i data-feather="twitter" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white" title="LinkedIn">
-                            <i data-feather="linkedin" class="w-6 h-6"></i>
+                        <a href="https://br.linkedin.com/company/centroradiologico-radson" target="_blank"
+                            class="social-link" title="LinkedIn">
+                            <i data-feather="linkedin" class="social-icon"></i>
                         </a>
                     </div>
                 </div>
-                <div>
-                    <h3 class="text-white text-sm font-semibold tracking-wider uppercase">Unidades | Centro e Estação</h3>
-                    <div class="mt-4 space-y-6">
-                        <div class="text-gray-400 text-sm">
-                            <h4 class="text-white font-medium">RADSON CENTRO</h4>
-                            <p>Rua Borges de Medeiros, 373</p>
-                            <p>Segunda a sexta: 7h às 12h - 13h às 18h</p>
-                            <a href="https://www.google.com/maps?q=Rua+Borges+de+Medeiros,+373" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-xs mt-1 inline-block">Ver mapa</a>
+                <div class="footer-col">
+                    <h3 class="footer-title">Unidades | Centro e Estação</h3>
+                    <div class="footer-units-wrapper">
+                        <div class="footer-unit">
+                            <h4 class="footer-unit-title">RADSON CENTRO</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Rua Borges de Medeiros, 373</p>
+                            <p><i class="fas fa-clock"></i> Segunda a sexta: 7h às 12h - 13h às 18h</p>
+                            <a href="https://www.google.com/maps?q=Rua+Borges+de+Medeiros,+373" target="_blank"
+                                class="footer-map-link">Ver mapa</a>
                         </div>
-                        <div class="text-gray-400 text-sm">
-                            <h4 class="text-white font-medium">RADSON ESTAÇÃO</h4>
-                            <p>Rua Ramiro Barcelos, 1401</p>
-                            <p>Segunda a sexta: 7h às 18h</p>
-                            <a href="https://www.google.com/maps?q=Rua+Ramiro+Barcelos,+1401" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-xs mt-1 inline-block">Ver mapa</a>
+                        <div class="footer-unit">
+                            <h4 class="footer-unit-title">RADSON ESTAÇÃO</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Rua Ramiro Barcelos, 1401</p>
+                            <p><i class="fas fa-clock"></i> Segunda a sexta: 7h às 18h</p>
+                            <a href="https://www.google.com/maps?q=Rua+Ramiro+Barcelos,+1401" target="_blank"
+                                class="footer-map-link">Ver mapa</a>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h3 class="text-white text-sm font-semibold tracking-wider uppercase">Unidade | Ana Nery e Contato</h3>
-                    <div class="mt-4 space-y-6">
-                        <div class="text-gray-400 text-sm">
-                            <h4 class="text-white font-medium">RADSON ANA NERY</h4>
-                            <p>Rua Amapá, 175</p>
-                            <p>Segunda a sexta: 7h às 19h</p>
-                            <p>Sábado: 7h às 12h</p>
-                            <a href="https://www.google.com/maps?q=Rua+Amapá,+175" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-xs mt-1 inline-block">Ver mapa</a>
+                <div class="footer-col">
+                    <h3 class="footer-title">Unidade | Ana Nery e Contato</h3>
+                    <div class="footer-units-wrapper">
+                        <div class="footer-unit">
+                            <h4 class="footer-unit-title">RADSON ANA NERY</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Rua Amapá, 175</p>
+                            <p><i class="fas fa-clock"></i> Segunda a sexta: 7h às 19h<br>Sábado: 7h às 12h</p>
+                            <a href="https://www.google.com/maps?q=Rua+Amapá,+175" target="_blank"
+                                class="footer-map-link">Ver mapa</a>
                         </div>
-                        <div class="text-gray-400 text-sm">
-                            <h4 class="text-white font-medium">Contato Geral</h4>
+                        <div class="footer-unit">
+                            <h4 class="footer-unit-title">Contato Geral</h4>
                             <p>Telefone: 51 21095151</p>
                             <p>Whatsapp: 51 99649.2360</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm order-2 md:order-1 mt-4 md:mt-0">
+            <div class="footer-bottom">
+                <p class="footer-copy">
                     © 2025 RADSON. Todos os direitos reservados.
                 </p>
-                <div class="flex space-x-6 order-1 md:order-2">
-                    <a href="#" class="text-gray-400 hover:text-white text-sm">Política de Privacidade</a>
-                    <a href="#" class="text-gray-400 hover:text-white text-sm">Termos de Uso</a>
+                <div class="footer-legal-links">
+                    <a href="#" class="footer-legal-link">Política de Privacidade</a>
+                    <a href="#" class="footer-legal-link">Termos de Uso</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Ensure Feather icons are replaced.
-        if (typeof feather !== 'undefined') {
-            feather.replace();
-        }
-        
-        // Mobile menu JS
-        document.querySelector('[aria-controls="mobile-menu"]').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
+
+        feather.replace();
+
+        const menuButton = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const iconOpen = menuButton.querySelector('.menu-icon-open');
+        const iconClose = menuButton.querySelector('.menu-icon-close');
+
+        menuButton.addEventListener('click', function () {
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !isExpanded);
+
             menu.classList.toggle('hidden');
+
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
         });
     </script>
 </body>
+
 </html>
