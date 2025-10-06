@@ -506,11 +506,3 @@ a {
 
 
 /* Estilo para o botão verde do WhatsApp */
-.whatsapp-btn {
-    background-color: #25d366;  /* Cor verde do WhatsApp */
-    color: white;
-}
-
-.whatsapp-btn:hover {
-    background-color: #128C7E; /* Cor verde mais escura ao passar o mouse */
-}

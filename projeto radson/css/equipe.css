@@ -1,27 +1,296 @@
  /* Hero */
-        .hero {
-            background-color: #dc2626;
-            color: white;
-            padding: 4rem 1rem;
-            text-align: center;
-        }
+ .hero {
+     background-color: #dc2626;
+     color: white;
+     padding: 4rem 1rem;
+     text-align: center;
+ }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
+ .hero h1 {
+     font-size: 2.5rem;
+     font-weight: 700;
+ }
 
-        .sections-container {
-            padding: 0px 250px;
-        }
+ .sections-container {
+     max-width: 1280px;
+     margin-left: auto;
+     margin-right: auto;
+     padding-left: 6rem;
+     /* Reduzido de 5rem para 3rem */
+     padding-right: 6rem;
+     /* Reduzido de 5rem para 3rem */
+ }
 
-        .hero p {
-            margin-top: 1rem;
-            font-size: 1.125rem;
-        }
-        .sections{
-            padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top:1rem;
-    padding-bottom: 3rem;
-        }
+ .hero p {
+     margin-top: 1rem;
+
+     font-size: 1.125rem;
+ }
+
+ .sections {
+     padding-left: 3rem;
+     padding-right: 3rem;
+     padding-top: 1rem;
+     padding-bottom: 3rem;
+ }
+
+ .doctor-grid {
+     display: grid;
+     gap: 2rem;
+     /* Espaçamento entre os cards */
+
+     /* Padrão: 1 coluna para telas muito pequenas */
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ }
+
+ /*
+ * 2. Estilos da Seção Equipe Médica
+ */
+
+ /* Removemos o 'doctor-grid' e usamos 'doctor-list' no HTML */
+ .team-title {
+     font-size: 2rem;
+     font-weight: 700;
+     color: var(--color-primary);
+     text-align: center;
+     margin-bottom: 0.5rem;
+ }
+
+ .team-section {
+     padding-top: 1.5rem;
+     padding-bottom: 1.5rem;
+ }
+
+ .team-subtitle {
+     font-size: 1.125rem;
+     color: var(--color-text-medium);
+     text-align: center;
+     margin-bottom: 3rem;
+     /* Aumenta o espaço após o subtítulo */
+ }
+
+ /* ... (Manter estilos da Hero, team-title e team-subtitle) ... */
+
+ /* * Estilos do Card de Estrutura Completa
+ */
+ .doctor-card-full {
+     display: flex;
+     /* Usamos flex para empilhar o nome/afiliação acima da linha da foto/bio */
+     flex-direction: column;
+     padding-top: 1rem;
+     padding-left: 3rem;
+     padding-right: 4rem;
+     background-color: var(--color-background-medium);
+     border: 1px solid #E5E7EB;
+     transition: box-shadow 0.3s;
+ }
+
+ .doctor-card-full:hover {
+     box-shadow: 0 8px 15px -5px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Informações que ficam ACIMA da linha da foto e biografia */
+ .doctor-name,
+ .doctor-affiliation {
+     text-align: left;
+ }
+
+ .doctor-name {
+     font-size: 1.5rem;
+     font-weight: 700;
+     color: var(--color-primary-dark);
+     margin-bottom: 0.25rem;
+     margin-top: 0.5rem;
+ }
+
+ .doctor-affiliation {
+     font-size: 0.95rem;
+     color: var(--color-text-medium);
+     margin-bottom: 2rem;
+     /* Espaço antes da linha da foto/bio */
+     font-weight: 500;
+ }
+
+
+ /* * Bloco da Foto e Biografia (Lado a Lado)
+ */
+ .doctor-bio-row {
+     display: grid;
+     /* Coluna 1: Foto (150px) | Coluna 2: Biografia (o restante) */
+     grid-template-columns: 150px 1fr;
+     gap: 2rem;
+     /* Espaço entre a foto e o texto */
+     align-items: start;
+     /* Alinha a biografia ao topo da foto */
+ }
+
+ /* Coluna da Foto (Agrupa foto, CRM e Lattes) */
+ .doctor-photo-col {
+     text-align: center;
+ }
+
+ .doctor-photo {
+     width: 250px;
+     height: 400px;
+     object-fit: cover;
+     border-radius: 0.5rem;
+     /* Quadrada com cantos arredondados */
+     margin: 0 auto 1rem;
+ }
+
+
+ /* Coluna da Biografia (Texto) */
+ .doctor-bio-col {
+     text-align: left;
+     padding-left: 6rem;
+ }
+
+ .bio-paragraph {
+     margin-bottom: 1rem;
+     line-height: 1.7;
+     font-size: 1rem;
+     color: var(--color-text-dark);
+ }
+
+ .bio-instagram {
+     margin-top: 1.5rem;
+     font-weight: 500;
+     font-size: 0.95rem;
+     color: var(--color-text-dark);
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+ }
+
+ .instagram-link {
+     color: var(--color-primary);
+     display: inline-flex;
+     align-items: center;
+     transition: color 0.3s;
+ }
+
+ .instagram-link:hover {
+     color: var(--color-primary-dark);
+ }
+
+ .social-icon {
+     width: 1rem;
+     height: 1rem;
+ }
+
+ .doctor-divider {
+     border: 0;
+     height: 1px;
+     background-color: #E5E7EB;
+     margin: 3rem 0;
+ }
+
+
+ /* * Responsividade para Telas Pequenas (Mobile)
+ */
+ @media (max-width: 768px) {
+     /* Em mobile, o layout doctor-card-full é mantido, mas o bloco da foto/bio muda */
+
+     .doctor-bio-row {
+         /* Muda para 1 coluna em mobile: foto acima, biografia abaixo */
+         grid-template-columns: 1fr;
+         gap: 1.5rem;
+     }
+
+     /* Centraliza a coluna da foto no mobile */
+     .doctor-photo-col {
+         text-align: center;
+         border-bottom: 1px solid #E5E7EB;
+         padding-bottom: 1.5rem;
+         margin-bottom: 0;
+     }
+
+     .doctor-bio-col {
+         text-align: left;
+         padding-top: 0;
+         margin-top: 0;
+     }
+
+     .bio-instagram {
+         justify-content: flex-start;
+         /* Alinha o Instagram à esquerda no mobile */
+     }
+ }
+
+ /* ... (Mantenha os estilos de sections-container, doctor-card-full, name e affiliation) ... */
+
+ /* Estilo para a imagem que FLUTUA à esquerda */
+ .doctor-photo-float {
+     /* Usamos a classe 'doctor-photo-float' para aplicar a flutuação */
+     float: left;
+     width: 200px;
+     height: 200px;
+     object-fit: cover;
+     border-radius: 0.5rem;
+     margin-right: 2rem;
+     /* Espaço entre a imagem e o texto que flutua */
+     margin-bottom: 1.5rem;
+     border: 4px solid var(--color-primary);
+ }
+
+ /* Biografia (apenas garantimos o alinhamento esquerdo) */
+ .doctor-bio-content {
+     text-align: left;
+ }
+
+ /* Opcional: Para resetar a flutuação APÓS o conteúdo principal */
+ .clearfix::after {
+     content: "";
+     display: table;
+     clear: both;
+ }
+
+ /* Estilos para informações que devem ficar abaixo da biografia */
+ .doctor-extra-info {
+     clear: both;
+     /* Garante que esta div comece abaixo da imagem flutuante */
+     text-align: center;
+     margin-top: 1.5rem;
+     padding-top: 1rem;
+     border-top: 1px solid #E5E7EB;
+ }
+
+ .doctor-crm {
+     font-size: 0.875rem;
+     color: var(--color-text-medium);
+     margin-bottom: 0.5rem;
+     font-weight: 500;
+ }
+
+ .doctor-lattes-link {
+     /* Mantido o estilo anterior */
+     display: block;
+     margin-top: 0.5rem;
+     font-size: 0.875rem;
+     font-weight: 500;
+     color: var(--color-primary);
+     border-bottom: 1px solid transparent;
+     transition: border-bottom 0.3s;
+ }
+
+ /* ... (Mantenha os estilos da biografia: bio-paragraph, bio-instagram, etc.) ... */
+
+
+ /* * Responsividade para Telas Pequenas (Mobile)
+ */
+ @media (max-width: 768px) {
+
+     /* Remove a flutuação e centraliza a imagem no mobile */
+     .doctor-photo-float {
+         float: none;
+         margin: 0 auto 1.5rem;
+         width: 150px;
+         height: 150px;
+     }
+
+     /* Centraliza o conteúdo extra no mobile */
+     .doctor-extra-info {
+         text-align: center;
+         clear: none;
+     }
+ }
