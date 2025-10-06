@@ -1,0 +1,119 @@
+        /* Hero */
+        .hero {
+            background-color: #dc2626;
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .sections-container {
+            padding: 0px 250px;
+        }
+
+        .hero p {
+            margin-top: 1rem;
+            font-size: 1.125rem;
+        }
+        .sections{
+            padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top:1rem;
+    padding-bottom: 3rem;
+        }
+        /* Botões de troca */
+        .btn-toggle-container {
+            max-width: 768px;
+            margin: 2rem auto;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0 1.5rem;
+        }
+
+        .btn-contato,
+        .btn-trabalhe {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 700;
+            border: 0;
+        }
+
+        .btn-contato {
+            background-color: #dc2626;
+            color: white;
+        }
+
+        .btn-contato:hover {
+            background-color: #b91c1c;
+        }
+
+        .btn-trabalhe {
+            background-color: #dc2626;
+            color: white;
+        }
+
+        .btn-trabalhe:hover {
+            background-color: #b91c1c;
+        }
+
+        /* Forms */
+/* Mantendo o estilo do container */
+.form-section,
+.form-container {
+    background-color: var(--branco); /* Usando variável do root */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-section input,
+.form-section textarea,
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    /* 1. Removendo bordas normais e padding lateral */
+    border: none;
+    border-radius: 0;
+    padding: 0.75rem 0; /* Padding vertical, removendo o lateral */
+    
+    /* 2. Adicionando borda inferior (a linha cinza) */
+    border-bottom: 2px solid var(--color-text-medium); /* Linha cinza escura para contraste */
+    
+    margin-bottom: 1rem; /* Aumentei a margem para separar as linhas */
+    
+    background-color: transparent; /* Garante que o fundo seja invisível */
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-text-medium); /* Cor do texto */
+    transition: border-bottom-color 0.3s ease; /* Transição suave para o foco */
+}
+
+/* 3. Efeito de Foco (quando selecionado) */
+.form-section input:focus,
+.form-section textarea:focus,
+.form-container input:focus,
+.form-container textarea:focus {
+    outline: none; /* Remove a borda padrão do navegador */
+    border-bottom-color: var(--color-primary); /* Linha vermelha quando selecionado */
+}
+
+/* Estilos para o botão (mantidos para usar as variáveis de cor) */
+.form-section button,
+.form-container button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none; /* Certificando que o botão não tenha borda */
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-section button:hover,
+.form-container button:hover {
+    background-color: var(--color-primary-dark); /* Vermelho mais escuro no hover */
+}

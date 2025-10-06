@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exames - RADSON</title>
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://www.radson.com.br/assets/static/favicons/favicon-16x16.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/exames.css">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="main-header-nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo-area">
+                    <a href="index.html">
+                        <img width="200"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRxJu7Z5AzNRcUD3aTLt5fk1zhzRCzncRv9w&s"
+                            alt="Logotipo da RADSON Medicina Diagnóstica">
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-toggle-mobile">
+                <button type="button" class="menu-button" aria-controls="mobile-menu" aria-expanded="false"
+                    id="mobile-menu-button">
+                    <svg class="h-6 w-6 menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="h-6 w-6 hidden menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="nav-menu-desktop">
+                <a href="exames.html" class="menu-link">Exames</a>
+                <a href="equipe.html" class="menu-link">Equipe médica</a>
+                <a href="convenios.html" class="menu-link">Convênios</a>
+                <a href="noticia.html" class="menu-link">Notícias</a>
+                <a href="contato.html" class="menu-link">Contato</a>
+                <a href="https://rds.otimusclinic.com/radson/servlet/app.entrar" target="_blank"
+                    class="menu-link">Acesso médico</a>
+                <a href="https://rds.otimusclinic.com/radson/servlet/app.resultadodeexame?sdTjZIxAkYVpFL5AwTTQ8aUtVYs+hKhFyP16JMhyWus="
+                    target="_blank" class="menu-link">Resultados exames</a>
+            </div>
+
+        </div>
+
+        <div class="nav-menu-mobile hidden" id="mobile-menu">
+            <div class="mobile-links-wrapper">
+                <a href="https://rds.otimusclinic.com/radson/servlet/app.entrar" class="mobile-menu-link">Acesso médico
+                </a>
+                <a href="https://rds.otimusclinic.com/radson/servlet/app.resultadodeexame?sdTjZIxAkYVpFL5AwTTQ8aUtVYs+hKhFyP16JMhyWus="
+                    class="mobile-menu-link">Resultado exames</a>
+                <a href="exames.html" class="mobile-menu-link">Exames</a>
+                <a href="convenios.html" class="mobile-menu-link">Convênios</a>
+                <a href="contato.html" class="mobile-menu-link">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Nossos Exames</h1>
+        <p>Diagnóstico por imagem com tecnologia avançada e precisão.</p>
+    </section>
+
+    <main class="container">
+        <div class="card">
+            <h3>Radiologia Digital</h3>
+            <p>Exame de raios X que avalia ossos e órgãos internos. Pode utilizar contraste para melhor análise de
+                estruturas específicas. É indicado para investigação de fraturas, tumores e doenças ósseas.
+                <br><strong>Cuidados:</strong> Retirar roupas e acessórios metálicos, plásticos, de vidro ou madeira na
+                região analisada.</p>
+        </div>
+        <div class="card">
+            <h3>Mamografia Digital</h3>
+            <p>Rastreamento que identifica precocemente o câncer de mama com alta precisão. Recomendado anualmente para
+                mulheres a partir dos 40 anos, ou antes em casos de histórico familiar. <br><strong>Cuidados:</strong> O
+                exame exige compressão da mama para melhor qualidade da imagem.</p>
+        </div>
+        <div class="card">
+            <h3>Densitometria Óssea</h3>
+            <p>Avalia a densidade mineral dos ossos, auxiliando no diagnóstico da osteoporose. Indicado para mulheres
+                acima de 45 anos e homens acima de 50. <br><strong>Cuidados:</strong> Evitar ingestão de cálcio no dia
+                do exame e não realizar em conjunto com exames contrastados recentes.</p>
+        </div>
+        <div class="card">
+            <h3>Ecografia com Doppler 3D/4D</h3>
+            <p>Ultrassom que permite acompanhar a saúde do bebê durante a gestação, avaliando riscos como pré-eclâmpsia.
+                Indicado principalmente entre 18 e 24 semanas. <br><strong>Cuidados:</strong> Exame seguro, sem
+                contraindicações, indicado também em gestações de alto risco.</p>
+        </div>
+        <div class="card">
+            <h3>Biópsias, Punções e Drenagens</h3>
+            <p>Procedimentos minimamente invasivos usados para diagnóstico de lesões ou como forma de tratamento (como
+                drenagens e ablações). <br><strong>Cuidados:</strong> Seguir as orientações médicas específicas para
+                cada caso.</p>
+        </div>
+        <div class="card">
+            <h3>Tomografia Computadorizada</h3>
+            <p>Exame de imagem em alta resolução que permite visualizar órgãos e tecidos em diferentes ângulos e 3D.
+                <br><strong>Cuidados:</strong> Exige jejum e, em alguns casos, uso de contraste oral, retal ou
+                endovenoso.</p>
+        </div>
+        <div class="card">
+            <h3>Ressonância Magnética</h3>
+            <p>Exame sem radiação que usa campo magnético para gerar imagens detalhadas do corpo. Indicado para avaliar
+                sistema nervoso, músculos, ligamentos e articulações. <br><strong>Cuidados:</strong> Contraindicado para
+                portadores de marca-passo, próteses metálicas e stents.</p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">RADSON</h3>
+                    <p class="footer-text">
+                        Excelência em medicina diagnóstica há 39 anos.
+                    </p>
+                    <h4 class="footer-subtitle">Siga-nos</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/radson.radiologico/" target="_blank" class="social-link"
+                            title="Instagram">
+                            <i data-feather="instagram" class="social-icon"></i>
+                        </a>
+                        <a href="https://www.facebook.com/radson.radiologico/" target="_blank" class="social-link"
+                            title="Facebook">
+                            <i data-feather="facebook" class="social-icon"></i>
+                        </a>
+                        <a href="https://br.linkedin.com/company/centroradiologico-radson" target="_blank"
+                            class="social-link" title="LinkedIn">
+                            <i data-feather="linkedin" class="social-icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Unidades | Centro e Estação</h3>
+                    <div class="footer-units-wrapper">
+                        <div class="footer-unit">
+                            <h4 class="footer-unit-title">RADSON CENTRO</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Rua Borges de Medeiros, 373</p>
+                            <p><i class="fas fa-clock"></i> Segunda a sexta: 7h às 12h - 13h às 18h</p>
+                            <a href="https://www.google.com/maps?q=Rua+Borges+de+Medeiros,+373" target="_blank"
+                                class="footer-map-link">Ver mapa</a>
+                        </div>
+                        <div class="footer-unit">
+                            <h4 class="footer-unit-title">RADSON ESTAÇÃO</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Rua Ramiro Barcelos, 1401</p>
+                            <p><i class="fas fa-clock"></i> Segunda a sexta: 7h às 18h</p>
+                            <a href="https://www.google.com/maps?q=Rua+Ramiro+Barcelos,+1401" target="_blank"
+                                class="footer-map-link">Ver mapa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Unidade | Ana Nery e Contato</h3>
+                    <div class="footer-units-wrapper">
+                        <div class="footer-unit">
+                            <h4 class="footer-unit-title">RADSON ANA NERY</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Rua Amapá, 175</p>
+                            <p><i class="fas fa-clock"></i> Segunda a sexta: 7h às 19h<br>Sábado: 7h às 12h</p>
+                            <a href="https://www.google.com/maps?q=Rua+Amapá,+175" target="_blank"
+                                class="footer-map-link">Ver mapa</a>
+                        </div>
+                        <div class="footer-unit">
+                            <h4 class="footer-unit-title">Contato Geral</h4>
+                            <p>Telefone: 51 21095151</p>
+                            <p>Whatsapp: 51 99649.2360</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">
+                    © 2025 RADSON. Todos os direitos reservados.
+                </p>
+                <div class="footer-legal-links">
+                    <a href="#" class="footer-legal-link">Política de Privacidade</a>
+                    <a href="#" class="footer-legal-link">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        feather.replace();
+
+        const menuButton = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const iconOpen = menuButton.querySelector('.menu-icon-open');
+        const iconClose = menuButton.querySelector('.menu-icon-close');
+
+        menuButton.addEventListener('click', function () {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+
+            menu.classList.toggle('hidden');
+
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
