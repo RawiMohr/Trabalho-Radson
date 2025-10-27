@@ -4,17 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Convênios atendidos pela RADSON - Medicina Diagnóstica">
-    <title>Convênios - RADSON</title>
+    <meta name="description" content="RADSON - Excelência em medicina diagnóstica. Exames de imagem e consultas.">
+
+    <title>RADSON - Medicina Diagnóstica</title>
     <link rel="icon" type="image/png" sizes="16x16"
         href="https://www.radson.com.br/assets/static/favicons/favicon-16x16.png">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/convenios.css">
+    <link rel="stylesheet" href="css/noticia.css">
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
 
 <body>
     <nav class="main-header-nav">
@@ -56,9 +58,7 @@
                 <a href="https://rds.otimusclinic.com/radson/servlet/app.resultadodeexame?sdTjZIxAkYVpFL5AwTTQ8aUtVYs+hKhFyP16JMhyWus="
                     target="_blank" class="menu-link-diferente">Resultados exames</a>
             </div>
-
         </div>
-
         <div class="nav-menu-mobile hidden" id="mobile-menu">
             <div class="mobile-links-wrapper">
                 <a href="https://rds.otimusclinic.com/radson/servlet/app.entrar" class="mobile-menu-link">Acesso
@@ -75,120 +75,15 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="hero">
-        <div class="container text-center">
-            <h1>Convênios</h1>
-            <p>Atendemos os principais planos de saúde, garantindo praticidade e confiança em seu atendimento.</p>
-        </div>
-    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Nossas Unidades</h1>
+                <p>Fique por dentro de todas as novidades do RADSON</p>
+            </div>
+        </section>
 
-    <!-- Lista de Convênios -->
-    <main class="container">
-        <h2>Planos Atendidos</h2>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Pesquisar convênio...">
-        </div>
-        <div id="conveniosGrid" class="grid">
-            <!-- TODOS os convênios em ordem alfabética -->
-            <div class="convenio-card">ADVOGADOS RECH E OLIVEIRA</div>
-            <div class="convenio-card">APOPESC</div>
-            <div class="convenio-card">ASFAP</div>
-            <div class="convenio-card">ASSAF</div>
-            <div class="convenio-card">ASSEFAZ</div>
-            <div class="convenio-card">ATENDBEM</div>
-            <div class="convenio-card">ATENDCARD</div>
-            <div class="convenio-card">BELAPAN</div>
-            <div class="convenio-card">CABERGS</div>
-            <div class="convenio-card">CAIXA DE ASSISTÊNCIA DOS ADVOGADOS RS</div>
-            <div class="convenio-card">CASSI</div>
-            <div class="convenio-card">CAUSO</div>
-            <div class="convenio-card">CENTRO CLINICO GAUCHO - CCG</div>
-            <div class="convenio-card">CENTRO DE REABILITAÇÃO ESPORTIVA LTDA</div>
-            <div class="convenio-card">CHIMAMED</div>
-            <div class="convenio-card">CIJACUI</div>
-            <div class="convenio-card">CISVALE</div>
-            <div class="convenio-card">CLINICA AMOR SAUDE</div>
-            <div class="convenio-card">CLINICA PREVINI</div>
-            <div class="convenio-card">DIERSMANN ASSISTÊNCIA FAMILIAR</div>
-            <div class="convenio-card">DS ENGENHARIA</div>
-            <div class="convenio-card">E. KOPP</div>
-            <div class="convenio-card">ELISEU KOPP</div>
-            <div class="convenio-card">ERGOSS</div>
-            <div class="convenio-card">ESPORTE CLUBE GUARANI</div>
-            <div class="convenio-card">ESPORTE CLUBE UNIÃO CORINTHIANS</div>
-            <div class="convenio-card">FAMILIA ANA NERY</div>
-            <div class="convenio-card">FUNERÁRIA GASS</div>
-            <div class="convenio-card">FUNERÁRIA HALMENSCHLAGER</div>
-            <div class="convenio-card">FUSEX</div>
-            <div class="convenio-card">GEAP</div>
-            <div class="convenio-card">GERMANI ALIMENTOS</div>
-            <div class="convenio-card">HOSPITAL ANA NERY</div>
-            <div class="convenio-card">HOSPITAL CANDELARIA</div>
-            <div class="convenio-card">HOSPITAL SANTA CRUZ</div>
-            <div class="convenio-card">HOSPITAL VERA CRUZ</div>
-            <div class="convenio-card">IBCM</div>
-            <div class="convenio-card">INDUCAL</div>
-            <div class="convenio-card">IPE</div>
-            <div class="convenio-card">JTI PROCESSADORA</div>
-            <div class="convenio-card">LIGA FEM. BOQ. LEAO</div>
-            <div class="convenio-card">MEDFACIL - LAJEADO</div>
-            <div class="convenio-card">METALURGICA MOR</div>
-            <div class="convenio-card">PHILIP MORRIS</div>
-            <div class="convenio-card">PLAMART</div>
-            <div class="convenio-card">PLANO DE ASSISTÊNCIA FAMILIAR</div>
-            <div class="convenio-card">PLANO FREITAS</div>
-            <div class="convenio-card">PREMIUM TABACOS</div>
-            <div class="convenio-card">PREVINA</div>
-            <div class="convenio-card">PREVISUL</div>
-            <div class="convenio-card">PRODENT</div>
-            <div class="convenio-card">PROTEGE</div>
-            <div class="convenio-card">PROVIDA</div>
-            <div class="convenio-card">PRO VIDA SAUDE OCUP.</div>
-            <div class="convenio-card">PRONTY ASSESSORIA ORGANIZACIONAL</div>
-            <div class="convenio-card">SAUDE CAIXA</div>
-            <div class="convenio-card">SAUDE PAZ</div>
-            <div class="convenio-card">SC AVENIDA</div>
-            <div class="convenio-card">SC SANTA CRUZ</div>
-            <div class="convenio-card">SC SANTA CRUZ - LOCAÇÃO</div>
-            <div class="convenio-card">SEGURA MED</div>
-            <div class="convenio-card">SESC</div>
-            <div class="convenio-card">SESI VITA</div>
-            <div class="convenio-card">SIND. COMÉRCIO EMPREGADOS SCS E REGIÃO</div>
-            <div class="convenio-card">SIND. EMP. COM. P.GRANDE, P. SOBRADO E RP</div>
-            <div class="convenio-card">SIND. IND. ALIMENTAÇÃO SCS</div>
-            <div class="convenio-card">SIND. METALÚRGICOS SCS</div>
-            <div class="convenio-card">SIND. RURAL CANDELARIA</div>
-            <div class="convenio-card">SIND. RURAL SCS</div>
-            <div class="convenio-card">SIND. TRAB. IND. FUMO E ALIM. SCS E REGIÃO</div>
-            <div class="convenio-card">SIND. TRAB. NAS IND. ALIMENTAÇÃO DE RP</div>
-            <div class="convenio-card">SIND. TRAB. AGRICULTORES FAM. GRAMADO X.</div>
-            <div class="convenio-card">SIND. TRAB. IND. METALMEC MAT.ELETRICO SCS</div>
-            <div class="convenio-card">SIND. TRAB. IND. CONSTRUÇÃO E MOB. RP</div>
-            <div class="convenio-card">SIND. TRAB. RURAIS DE PANTANO GRANDE</div>
-            <div class="convenio-card">SIND. TRAB. RURAIS DE PASSO SOBRADO</div>
-            <div class="convenio-card">SIND. TRAB. RURAIS DE RIO PARDO</div>
-            <div class="convenio-card">SIND. TRAB. RURAIS DE VENANCIO AIRES</div>
-            <div class="convenio-card">SIND. TRAB. RURAIS AGRIC. FAMILIAR VERA C.</div>
-            <div class="convenio-card">SIND. VIGILANTES SCS E REGIÃO</div>
-            <div class="convenio-card">SINDIASSEIO</div>
-            <div class="convenio-card">SINDIPOSTOS</div>
-            <div class="convenio-card">SINDIRODOVIARIOS</div>
-            <div class="convenio-card">SÓCIOS HOSP. ANA NERY</div>
-            <div class="convenio-card">STR SANTA CRUZ</div>
-            <div class="convenio-card">SUS BPA</div>
-            <div class="convenio-card">SUS INTERNO</div>
-            <div class="convenio-card">SUS PMAH</div>
-            <div class="convenio-card">SUS UPA</div>
-            <div class="convenio-card">UNIFACIL</div>
-            <div class="convenio-card">UNIMED</div>
-            <div class="convenio-card">UNIVERSALMED</div>
-            <div class="convenio-card">VALE SAUDE</div>
-            <div class="convenio-card">WOLKMER E CIA LTDA</div>
-        </div>
     </main>
-
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-grid">
@@ -268,19 +163,6 @@
     </footer>
 
     <script>
-        const searchInput = document.getElementById('searchInput');
-        const conveniosGrid = document.getElementById('conveniosGrid');
-        const cards = conveniosGrid.querySelectorAll('.convenio-card');
-
-        searchInput.addEventListener('input', function () {
-            const filter = searchInput.value.toLowerCase();
-            cards.forEach(card => {
-                const text = card.textContent.toLowerCase();
-                card.style.display = text.includes(filter) ? 'block' : 'none';
-            });
-        });
-
-
         feather.replace();
 
         const menuButton = document.getElementById('mobile-menu-button');
@@ -298,7 +180,6 @@
             iconClose.classList.toggle('hidden');
         });
     </script>
-
 </body>
 
 </html>

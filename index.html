@@ -54,17 +54,18 @@
                 <a href="projeto radson/noticia.html" class="menu-link">Notícias</a>
                 <a href="projeto radson/contato.html" class="menu-link">Contato</a>
                 <a href="https://rds.otimusclinic.com/radson/servlet/app.entrar" target="_blank"
-                    class="menu-link">Acesso médico</a>
+                    class="menu-link-diferente">Acesso médico</a>
                 <a href="https://rds.otimusclinic.com/radson/servlet/app.resultadodeexame?sdTjZIxAkYVpFL5AwTTQ8aUtVYs+hKhFyP16JMhyWus="
-                    target="_blank" class="menu-link">Resultados exames</a>
+                    target="_blank" class="menu-link-diferente">Resultados exames</a>
             </div>
         </div>
-<div class="nav-menu-mobile hidden" id="mobile-menu">
+        <div class="nav-menu-mobile hidden" id="mobile-menu">
             <div class="mobile-links-wrapper">
-                <a href="https://rds.otimusclinic.com/radson/servlet/app.entrar" class="mobile-menu-link">Acesso médico</a>
+                <a href="https://rds.otimusclinic.com/radson/servlet/app.entrar" class="mobile-menu-link">Acesso
+                    médico</a>
                 <a href="https://rds.otimusclinic.com/radson/servlet/app.resultadodeexame?sdTjZIxAkYVpFL5AwTTQ8aUtVYs+hKhFyP16JMhyWus="
                     class="mobile-menu-link">Resultado exames</a>
-                
+
                 <a href="projeto radson/exames.html" class="mobile-menu-link">Exames</a>
                 <a href="projeto radson/equipe.html" class="mobile-menu-link">Equipe médica</a>
                 <a href="projeto radson/convenios.html" class="mobile-menu-link">Convênios</a>
@@ -75,31 +76,50 @@
     </nav>
 
     <main>
-        <div class="hero-section">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        <span class="hero-title-line">SAÚDE E BEM-ESTAR</span>
-                        <span class="hero-title-line primary-color">COM EXCELÊNCIA</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        O RADSON oferece diagnósticos precisos com tecnologia de ponta e atendimento humanizado.
-                    </p>
-                    <div class="hero-buttons-wrapper">
-                        <div class="hero-button-item">
-                            <a href="https://agenda.otimusclinic.com/rds" target="_blank"
-                                class="hero-button primary-btn">
-                                Agendamento Online
-                            </a>
-                        </div>
-                        <a href="https://api.whatsapp.com/send/?phone=5551996492360&text&type=phone_number&app_absent=0 "
-                            target="_blank" class="hero-button whatsapp-btn">
-                            Agendamento via Whatsapp
-                        </a>
-                    </div>
+        <div class="carousel">
+            <div class="slide active">
+                <img src="projeto radson/imagens/Tomografia.webp" alt="foto RADSON exame">
+                <div class="slide-content">
+                    <h2>SAÚDE E BEM-ESTAR COM EXCELÊNCIA</h2>
+                    <p>O RADSON oferece diagnósticos precisos com tecnologia de ponta e atendimento humanizado.</p>
+                    <a class="normal-btn" href="https://agenda.otimusclinic.com/rds/client/agendamento">Agendamento
+                        Online</a>
+                    <a class="whatsapp-btn"
+                        href="https://api.whatsapp.com/send/?phone=5551996492360&text&type=phone_number&app_absent=0">Agendamento
+                        via Whatsapp</a>
                 </div>
             </div>
-        </div>
+
+            <div class="slide">
+                <img src="projeto radson/imagens/EXAMESANTIGOS.webp" alt="fotos radson exames">
+                <div class="slide-content">
+                    <h2>Central de Atendimento</h2>
+                    <p>Tem alguma dúvida ou precisa de ajuda? Entre em contato pelos nossos canais de atendimento. Nossa
+                        equipe responderá o mais rápido possível!</p>
+                    <a title="Ligue-nos" class="normal-btn" href="tel:+555121095151"> <i class="fa fa-fw fa-phone"></i> 51
+                        2109.5151</a>
+                    <a title="Contate-nos por Whatsapp" class="normal-btn" href="https://wa.me/5551996492360">
+                        <i class="fab fa-whatsapp"></i> 51 99649.2360</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="projeto radson/imagens/RadsonAnaNery.jpg" alt="Foto radson ana nery">
+                <div class="slide-content">
+                    <h2>Nossas unidades</h2>
+                    <p>Encontre a unidade Radson mais perto de você, cada uma com um foco especial no seu bem-estar.</p>
+                    <a class="normal-btn" href="projeto radson/unidades.html">Conheça nossas unidades</a>
+                </div>
+            </div>
+
+            <button class="prev"><i class="fas fa-chevron-left __web-inspector-hide-shortcut__"></i></button>
+            <button class="next"><i class="fas fa-chevron-right __web-inspector-hide-shortcut__"></i></button>
+
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
 
         <div class="services-section">
@@ -206,16 +226,21 @@
                 </div>
             </div>
         </div>
+        <div id="cookie-banner" class="cookie-banner">
+            <p>Este site usa cookies para melhorar sua experiência.
+                <button id="accept-cookies">Aceitar</button>
+            </p>
+        </div>
     </main>
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3 class="footer-title">RADSON</h3>
+                    <a href="index.html"class="footer-title">RADSON</a>
                     <p class="footer-text">
                         Excelência em medicina diagnóstica há 39 anos.
                     </p>
-                    <h4 class="footer-subtitle">Siga-nos</h4>
+                    <h3 class="footer-title">Siga-nos</h4>
                     <div class="social-links">
                         <a href="https://www.instagram.com/radson.radiologico/" target="_blank" class="social-link"
                             title="Instagram">
@@ -230,9 +255,13 @@
                             <i data-feather="linkedin" class="social-icon"></i>
                         </a>
                     </div>
+                    <h3 class="footer-title">Administração</h3>
+                    <a href= "projeto radson/login.html"class="footer-text">
+                        Login
+                    </a>
                 </div>
                 <div class="footer-col">
-                    <h3 class="footer-title">Unidades | Centro e Estação</h3>
+                    <a href="projeto radson/unidades.html"class="footer-title">Unidades | Centro e Estação</a>
                     <div class="footer-units-wrapper">
                         <div class="footer-unit">
                             <h4 class="footer-unit-title">RADSON CENTRO</h4>
@@ -251,7 +280,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h3 class="footer-title">Unidade | Ana Nery e Contato</h3>
+                    <a href="projeto radson/unidades.html"class="footer-title">Unidades | Ana Nery e Contato</a>
                     <div class="footer-units-wrapper">
                         <div class="footer-unit">
                             <h4 class="footer-unit-title">RADSON ANA NERY</h4>
@@ -264,6 +293,7 @@
                             <h4 class="footer-unit-title">Contato Geral</h4>
                             <p>Telefone: 51 21095151</p>
                             <p>Whatsapp: 51 99649.2360</p>
+                            <p>Email: radson@radson.com.br</p>
                         </div>
                     </div>
                 </div>
@@ -297,6 +327,58 @@
             iconOpen.classList.toggle('hidden');
             iconClose.classList.toggle('hidden');
         });
+    </script>
+    <script>
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'block';
+        }
+
+        document.getElementById('accept-cookies').addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+
+    </script>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let index = 0;
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            if (n >= slides.length) index = 0;
+            if (n < 0) index = slides.length - 1;
+
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        document.querySelector('.next').addEventListener('click', () => {
+            index++;
+            showSlide(index);
+        });
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            index--;
+            showSlide(index);
+        });
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                index = i;
+                showSlide(index);
+            });
+        });
+
+        // Troca automática
+        setInterval(() => {
+            index++;
+            showSlide(index);
+        }, 16000);
+
     </script>
 </body>
 
