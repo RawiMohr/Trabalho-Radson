@@ -9,7 +9,7 @@ admin.initializeApp({
 });
 
 // UID do usuário que será admin
-const UID = "JsWm5VDu72Wxun73QOaJNCgi5MR2";
+const UID = "";
 
 // Define a permissão "admin: true"
 admin.auth().setCustomUserClaims(UID, { admin: true })
