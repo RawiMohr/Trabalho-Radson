@@ -51,7 +51,7 @@ a {
     transition: color 0.3s ease;
     font-weight: 500;
     color: var(--color-text-medium);
-
+    font-size: 1rem;
 }
 
 .menu-link-diferente {
@@ -61,6 +61,7 @@ a {
     color: white;
     padding: 12px 28px;
     border-radius: 10px;
+    font-size: 1rem;
 }
 .menu-link-diferente:hover{
     background-color: var(--color-primary-dark);
@@ -525,6 +526,41 @@ a {
 }
 
 /* O resto do media query (min-width: 768px) deve permanecer o mesmo */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav-menu-desktop {
+    gap: 1rem; /* reduzir espaçamento entre links */
+  }
+  .nav-container {
+    padding-left: 2rem; /* reduzir padding lateral para evitar efeito estourado */
+    padding-right: 2rem;
+    height: 5rem; /* altura menor para nav bar */
+  }
+  .nav-logo-area img {
+    width: 160px; /* ajustar tamanho do logo para não ocupar muito espaço */
+  }
+  .nav-menu-desktop .menu-link {
+    font-size: 0.9rem; /* reduzir tamanho da fonte para caber melhor */
+  }
+}
 
+@media (min-width: 900px) and (max-width: 1280px) {
+  .nav-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 5rem;
+  }
 
-/* Estilo para o botão verde do WhatsApp */
+  .nav-logo-area img {
+    width: 150px; /* reduz um pouco o logo */
+  }
+
+  .nav-menu-desktop {
+    gap: 1.2rem; /* diminui o espaço entre os links */
+    flex-wrap: nowrap; /* impede quebra de linha */
+  }
+
+  .nav-menu-desktop .menu-link,
+  .menu-link-diferente {
+    font-size: 0.9rem; /* fonte menor */
+  }
+}

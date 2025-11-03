@@ -8,6 +8,20 @@
   justify-content: center;
 }
 
+
+.slide-content .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Em telas pequenas, volta a empilhar naturalmente */
+@media (max-width: 768px) {
+  .slide-content .btn-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .slide {
   position: absolute;
   top: 0;
@@ -60,11 +74,11 @@
   display: inline-block;
   background-color: var(--color-primary);
   color: white;
-  padding: 12px 28px;
+  padding: 12px 25px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1em;
   transition: background 0.3s;
 }
 
@@ -77,11 +91,11 @@
   /* Cor verde do WhatsApp */
   color: white;
   display: inline-block;
-  padding: 12px 28px;
+  padding: 12px 25px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1em;
   transition: background 0.3s;
 }
 
@@ -244,9 +258,9 @@
   .whatsapp-btn {
     display: inline-block;
     margin: 8px auto;
-    padding: 8px 25px;
+    padding: 8px 20px;
     /* 🔹 botões menores */
-    font-size: 0.95em;
+    font-size: 0.875em;
     /* 🔹 texto menor */
     max-width: 85%;
     text-align: center;

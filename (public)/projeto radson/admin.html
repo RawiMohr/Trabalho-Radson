@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RADSON - Excelência em medicina diagnóstica. Exames de imagem e consultas.">
-
-    <title>RADSON - Medicina Diagnóstica</title>
+    <title>Login Admin - RADSON</title>
     <link rel="icon" type="image/png" sizes="16x16"
         href="https://www.radson.com.br/assets/static/favicons/favicon-16x16.png">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/noticia.css">
+    <link rel="stylesheet" href="css/exames.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -59,6 +57,7 @@
                     target="_blank" class="menu-link-diferente">Resultados exames</a>
             </div>
         </div>
+
         <div class="nav-menu-mobile hidden" id="mobile-menu">
             <div class="mobile-links-wrapper">
                 <a href="https://rds.otimusclinic.com/radson/servlet/app.entrar" class="mobile-menu-link">Acesso
@@ -75,15 +74,78 @@
         </div>
     </nav>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Nossas Unidades</h1>
-                <p>Fique por dentro de todas as novidades do RADSON</p>
-            </div>
-        </section>
+    <main class="container">
+         <h1>Painel do Administrador</h1>
+  <button id="logout">Sair</button>
 
+  <h2>Adicionar Produto</h2>
+  <form id="formProduto">
+    <input type="text" id="nome" placeholder="Nome do produto" required>
+    <input type="number" id="preco" placeholder="Preço" required>
+    <button type="submit">Salvar</button>
+  </form>
+
+  <h2>Lista de Produtos</h2>
+  <ul id="lista-produtos"></ul>
+
+  <script type="module">
+    import { auth, db } from "./firebase.js";
+import { signInWithEmailAndPassword, getIdTokenResult, signOut } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+    import { collection, addDoc, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+
+    const logoutBtn = document.getElementById("logout");
+    const form = document.getElementById("formProduto");
+    const lista = document.getElementById("lista-produtos");
+
+    // Verifica login e se é admin
+    onAuthStateChanged(auth, async (user) => {
+      if (!user) return window.location = "login.html";
+
+      const tokenResult = await getIdTokenResult(user);
+      if (!tokenResult.claims.admin) {
+        alert("Acesso negado! Somente administradores podem entrar.");
+        await signOut(auth);
+        return window.location = "login.html";
+      }
+
+      carregarProdutos(); // carrega produtos apenas se for admin
+    });
+
+    // Sair
+    logoutBtn.addEventListener("click", () => signOut(auth));
+
+    // Adicionar produto
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const nome = form.nome.value;
+      const preco = parseFloat(form.preco.value);
+
+      await addDoc(collection(db, "produtos"), { nome, preco });
+      alert("Produto adicionado!");
+      form.reset();
+      carregarProdutos();
+    });
+
+    // Mostrar produtos
+    async function carregarProdutos() {
+      lista.innerHTML = "";
+      const snapshot = await getDocs(collection(db, "produtos"));
+      snapshot.forEach(docSnap => {
+        const li = document.createElement("li");
+        li.textContent = `${docSnap.data().nome} - R$${docSnap.data().preco}`;
+        const btnDel = document.createElement("button");
+        btnDel.textContent = "Excluir";
+        btnDel.onclick = async () => {
+          await deleteDoc(doc(db, "produtos", docSnap.id));
+          carregarProdutos();
+        };
+        li.appendChild(btnDel);
+        lista.appendChild(li);
+      });
+    }
+  </script>
     </main>
+
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-grid">
@@ -163,6 +225,7 @@
     </footer>
 
     <script>
+
         feather.replace();
 
         const menuButton = document.getElementById('mobile-menu-button');
